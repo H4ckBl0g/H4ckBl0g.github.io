@@ -16,6 +16,8 @@ tags:
   - Active Direcotry
 ---
 
+![images/0.png](images/0.png)
+
 # Write up Active HTB
 
 Hoy vamos a estar resolviendo la maquina Active de HTB, es una maquina Windows de dificultad fácil. En la que vamos a enumerar puertos y buscar en el puerto 445 (SMB) algunos ficheros que no deberíamos de tener acceso.
