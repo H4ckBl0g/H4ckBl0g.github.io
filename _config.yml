@@ -101,7 +101,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "H4ckBl0g"
+  name             : "Snowscan"
   avatar           : "/assets/images/itachi.jpg"
   bio              : "Pentester, CTF player<br>HackTheBox"
   location         : "Spain, Cádiz"
