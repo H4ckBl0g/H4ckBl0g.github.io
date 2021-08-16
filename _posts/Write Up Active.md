@@ -1,16 +1,18 @@
 ---
 layout: single
 title: Active - Hack The Box
-date: 2021-06-15
+excerpt: "Descripcion de la maquina"
+date: 2021-06-22
 classes: wide
 header:
-  teaser: /assets/images/Active/Active/0.png
+  teaser: /assets/images/Active/0.png
+  teaser_home_page: true
+  icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
   - infosec
-tags:
-  - hackthebox
-  - Active Directory 
+tags:  
+  - Active Direcotry
 ---
 
 # Write up Active HTB
