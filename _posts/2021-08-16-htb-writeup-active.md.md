@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Active - Hack The Box
-excerpt: "Descripcion de la maquina"
+excerpt: "Active fue un ejemplo de una caja fácil que aún brindaba muchas oportunidades para aprender. El cuadro se centró en las vulnerabilidades comunes asociadas con Active Directory. Existe una buena posibilidad de practicar la enumeración de SMB. También brinda la oportunidad de usar Kerberoasting contra un dominio de Windows, lo cual, si no es un pentester, es posible que no haya tenido la oportunidad de hacerlo antes."
 date: 2021-08-16
 classes: wide
 header:
@@ -16,7 +16,7 @@ tags:
   - Active Direcotry
 ---
 
-![assets/images/Active/0.png](assets/images/Active/0.png)
+![/assets/images/Active/0.png](/assets/images/Active/0.png)
 
 # Write up Active HTB
 
