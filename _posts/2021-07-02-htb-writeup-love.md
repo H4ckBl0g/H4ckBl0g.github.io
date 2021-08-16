@@ -5,9 +5,9 @@ excerpt: "Love me ha gustado bastante ya que nos enseña a como ejecutar un ataq
 date: 2021-07-02
 classes: wide
 header:
-  teaser: /assets/images/Forest/Love/Forest/0.png
+  teaser: /assets/images/Love/Untitled.png
   teaser_home_page: true
-  icon: /assets/images/Forest/Love/hackthebox.webp
+  icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
   - infosec
@@ -24,9 +24,9 @@ Esta vez no voy a hacer tanto hincapié en el escaneo de puertos, sino en explic
 
 # **ESTADISTICAS DE LA MAQUINA**
 
-![images/Untitled.png](images/Untitled.png)
+![/assets/images/Love/Untitled.png](/assets/images/Love/Untitled.png)
 
-![images/Untitled%201.png](images/Untitled%201.png)
+![/assets/images/Love/Untitled%201.png](/assets/images/Love/Untitled%201.png)
 
 # **ESCANEO**
 
@@ -146,15 +146,15 @@ El directorio /admin/ me reporta otro login pero no me pide un ID sino un usuari
 
 Después de enumerar las paginas, en la pagina stanging.love.htb hay un beta.php que es un scanner de archivos url, pruebo un RFI a mi maquina atacante poniéndome en escucha con python y haciendo una petición a mi maquina, pero sin éxito, entonces intento ver archivos internos de la maquina:
 
-![images/Untitled%202.png](images/Untitled%202.png)
+![/assets/images/Love/Untitled%202.png](/assets/images/Love/Untitled%202.png)
 
 No obtengo nada de información, pero y si tiro de localhost para ver archivos locales internos de la maquina?:
 
-![images/Untitled%203.png](images/Untitled%203.png)
+![/assets/images/Love/Untitled%203.png](/assets/images/Love/Untitled%203.png)
 
 Vale, nos muestra cosas, pero como podemos aprovecharnos de esto?, pues recordáis la pagina que ponía Forbidden? Exacto! vamos a ojearla:
 
-![images/Untitled%204.png](images/Untitled%204.png)
+![/assets/images/Love/Untitled%204.png](/assets/images/Love/Untitled%204.png)
 
 Vaya vaya, parece que alguien nos ha regalado credenciales, a esto se le llama SSRF (Server Side Request Forgery):
 
@@ -166,7 +166,7 @@ En este caso podemos ver una pagina que externamente no tenemos acceso.
 
 Vamos a conectarnos con sus credenciales en el login http://love.htb/admin/
 
-![images/Untitled%205.png](images/Untitled%205.png)
+![/assets/images/Love/Untitled%205.png](/assets/images/Love/Untitled%205.png)
 
 Estamos dentro del panel, ahora toca ganar acceso a la maquina:
 
@@ -192,7 +192,7 @@ Primero de todo pruebo si me deja subir archivos .php en algun sitio y encuentro
 </html>
 ```
 
-![images/Untitled%206.png](images/Untitled%206.png)
+![/assets/images/Love/Untitled%206.png](/assets/images/Love/Untitled%206.png)
 
 Funciona correctamente, esto es posible porque la pagina esta mal sanitizada y el desarrollador de la pagina confió plenamente en el input del usuario, esto es muy grave porque un atacante con malas intenciones podría aprovecharse de esto para ganar acceso.
 
@@ -206,7 +206,7 @@ Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 10.10.10.239 - - [05/Aug/2021 12:47:26] "GET /nc.exe HTTP/1.1" 200 -
 ```
 
-![images/Untitled%207.png](images/Untitled%207.png)
+![/assets/images/Love/Untitled%207.png](/assets/images/Love/Untitled%207.png)
 
 ```bash
 ❯ rlwrap nc -nlvp 443

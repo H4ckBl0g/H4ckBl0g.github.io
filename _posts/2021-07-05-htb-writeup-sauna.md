@@ -5,9 +5,9 @@ excerpt: "Sauna fue una buena oportunidad para jugar con los conceptos de Window
 date: 2021-07-05
 classes: wide
 header:
-  teaser: /assets/images/Sauna/0.png
+  teaser: /assets/images/Sauna/Untitled.png
   teaser_home_page: true
-  icon: /assets/images/Sauna/hackthebox.webp
+  icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
   - infosec

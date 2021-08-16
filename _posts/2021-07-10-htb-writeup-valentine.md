@@ -5,7 +5,7 @@ excerpt: "Valentine nos enseñara lo importante que es buscar bien informacion e
 date: 2021-07-10
 classes: wide
 header:
-  teaser: /assets/images/Valentine/0.png
+  teaser: /assets/images/Valentine/Untitled.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:

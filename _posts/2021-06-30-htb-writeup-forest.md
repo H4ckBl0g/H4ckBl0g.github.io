@@ -5,7 +5,7 @@ excerpt: "Una de las cosas interesantes de HTB es que expone conceptos de Window
 date: 2021-06-30
 classes: wide
 header:
-  teaser: /assets/images/Forest/0.png
+  teaser: /assets/images/Forest/forest_hud42c7e9ba3326b41c7efd3293cf727ae_298854_1600x0_resize_box_2.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
