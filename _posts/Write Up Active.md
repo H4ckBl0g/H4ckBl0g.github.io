@@ -11,7 +11,8 @@ header:
 categories:
   - hackthebox
   - infosec
-tags:  
+tags:
+  - SMB  
   - Active Direcotry
 ---
 
