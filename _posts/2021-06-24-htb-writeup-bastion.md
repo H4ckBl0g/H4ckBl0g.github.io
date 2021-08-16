@@ -2,12 +2,12 @@
 layout: single
 title: Bastion - Hack The Box
 excerpt: "Bastion era una caja sólida y fácil con algunos desafíos simples como montar un VHD desde un recurso compartido de archivos y recuperar contraseñas de un programa de bóveda de contraseñas. Comienza, de manera algo inusual, sin un sitio web, sino más bien con imágenes vhd en un recurso compartido SMB, que, una vez montadas, brindan acceso a la colmena del registro necesaria para extraer las credenciales. Estas credenciales brindan la capacidad de ingresar al host como usuario. Para obtener acceso de administrador, aprovecharé la instalación de mRemoteNG, extraeré los datos del perfil y los datos cifrados, y mostraré varias formas de descifrarlos. Una vez que separe la contraseña de administrador, puedo ingresar como administrador."
-date: 2021-06-22
+date: 2021-06-24
 classes: wide
 header:
-  teaser: /assets//assets/images/Bastion/Bastion/0.png
+  teaser: /assets/images/Bastion/Bastion/0.png
   teaser_home_page: true
-  icon: /assets//assets/images/Bastion/hackthebox.webp
+  icon: /assets/images/Bastion/hackthebox.webp
 categories:
   - hackthebox
   - infosec
