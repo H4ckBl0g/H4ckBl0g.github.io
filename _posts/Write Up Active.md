@@ -2,7 +2,7 @@
 layout: single
 title: Active - Hack The Box
 excerpt: "Descripcion de la maquina"
-date: 2021-06-22
+date: 2021-08-16
 classes: wide
 header:
   teaser: /assets/images/Active/0.png
