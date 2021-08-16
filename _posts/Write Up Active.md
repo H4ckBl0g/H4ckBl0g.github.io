@@ -4,7 +4,7 @@ title: Active - Hack The Box
 date: 2021-06-15
 classes: wide
 header:
-  teaser: /assets//assets/images/Active/Active/0.png
+  teaser: /assets/images/Active/Active/0.png
 categories:
   - hackthebox
   - infosec
