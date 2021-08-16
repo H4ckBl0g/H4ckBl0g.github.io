@@ -5,7 +5,7 @@ excerpt: "Bastion era una caja sólida y fácil con algunos desafíos simples co
 date: 2021-06-24
 classes: wide
 header:
-  teaser: /assets/images/Bastion/Bastion/Untitled.png
+  teaser: /assets/images/Bastion/Untitled.png
   teaser_home_page: true
   icon: /assets/images/Bastion/hackthebox.webp
 categories:
