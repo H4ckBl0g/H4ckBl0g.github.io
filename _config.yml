@@ -101,11 +101,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Snowscan"
-  avatar           : "/assets/images/avatar.png"
-  bio              : "Pentester, CTF player<br>HackTheBox ATeam"
-  location         : "Canada"
-  email            : "info@snowscan.io"
+  name             : "H4ckBl0g"
+  avatar           : "/assets/images/imagenes/itachi.jpg"
+  bio              : "Pentester, CTF player<br>HackTheBox"
+  location         : "Spain, Cádiz"
+  email            : "adrijimsum.pentest@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
