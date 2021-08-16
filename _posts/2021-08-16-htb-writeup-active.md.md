@@ -16,7 +16,7 @@ tags:
   - Active Direcotry
 ---
 
-![images/0.png](images/0.png)
+![assets/images/Active/0.png](assets/images/Active/0.png)
 
 # Write up Active HTB
 
