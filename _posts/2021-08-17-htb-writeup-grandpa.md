@@ -20,7 +20,11 @@ tags:
 
 # GrandPa
 
-![Untitled](/assets/images/GrandPa/Untitled.png)
+<div>
+<p style = 'text-align:center;'>
+<img src="https://ethicalhacs.com/wp-content/uploads/2020/10/Grandpa-Hackthebox-walkthough.png" alt="" width="400px">
+</p>
+</div>
 
 <div>
 <p style = 'text-align:center;'>
