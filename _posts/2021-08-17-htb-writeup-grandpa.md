@@ -22,7 +22,7 @@ tags:
 
 <div>
 <p style = 'text-align:center;'>
-<img src="https://ethicalhacs.com/wp-content/uploads/2020/10/Grandpa-Hackthebox-walkthough.png" alt="" width="400px">
+<img src="https://ethicalhacs.com/wp-content/uploads/2020/10/Grandpa-Hackthebox-walkthough.png" alt="" width="600px">
 </p>
 </div>
 
