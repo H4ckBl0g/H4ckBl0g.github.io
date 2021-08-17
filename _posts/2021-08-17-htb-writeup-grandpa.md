@@ -2,7 +2,7 @@
 layout: single
 title: GrandPa - Hack The Box
 excerpt: "La maquina GrandPa nos vuelve a enseñar lo importante que es enumerar versiones de los servicios, gracias a ello conseguiremos encontrar un BOF que nos conseguirá acceso al sistema, y luego la escalada como la mayoria de maquinas tendremos que identificar un privilegio y jugar con churrasquito"
-date: 2021-07-16
+date: 2021-08-17
 classes: wide
 header:
   teaser: /assets/images/GrandPa/Untitled.png
