@@ -23,7 +23,7 @@ description              : "Posts sobre Ciberseguridad, CTFs y Pentesting"
 url                      : "https://H4ckBl0g.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "H4ckBl0g/H4ckBl0g.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-logo                     : "/assets/images/H4ckBl0g.jpg"
+logo                     : "/assets/images/H4ckBl0g.png"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "H4ckBl0g"
   avatar           : "/assets/images/itachi.jpg"
-  bio              : "Junior Pentester<br>CTF player<br>HackTheBox<br><br>Certificaciones:<br>eLearn Junior Penetration Tester<br>Certificado de Hacking Ético Experto"
+  bio              : "Ciberseguridad<br>Junior Pentester<br>CTF player<br>HackTheBox<br><br>Certificaciones:<br>eLearn Junior Penetration Tester<br>Certificado de Hacking Ético Experto"
   location         : "Spain"
   email            : "adrijimsum.pentest@gmail.com"
   uri              :
