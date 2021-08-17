@@ -1,8 +1,32 @@
+---
+layout: single
+title: GrandPa - Hack The Box
+excerpt: "La maquina GrandPa nos vuelve a enseñar lo importante que es enumerar versiones de los servicios, gracias a ello conseguiremos encontrar un BOF que nos conseguirá acceso al sistema, y luego la escalada como la mayoria de maquinas tendremos que identificar un privilegio y jugar con churrasquito"
+date: 2021-07-16
+classes: wide
+header:
+  teaser: /assets/images/GrandPa/Untitled.png
+  teaser_home_page: true
+  icon: /assets/images/hackthebox.webp
+categories:
+  - hackthebox
+  - infosec
+tags:
+  -   Web
+  -   IIS
+  -   BOF
+  -   Churrasco
+---
+
 # GrandPa
 
 ![Untitled](/assets/images/GrandPa/Untitled.png)
 
-![Untitled](/assets/images/GrandPa/Untitled%201.png)
+<div>
+<p style = 'text-align:center;'>
+<img src="https://0xdf.gitlab.io/img/grandpa-radar.webp" alt="" width="250px">
+</p>
+</div>
 
 Hoy voy a estar resolviendo la maquina GrandPa, es una maquina windows de dificultad facil.
 
