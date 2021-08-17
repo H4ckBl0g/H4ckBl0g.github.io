@@ -268,16 +268,11 @@
       {% if author.HackTheBox %}
         <li>
           <a href="{{ author.HackTheBox }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
-            <i class="fab fa-fw fa-cube" aria-hidden="true"></i> HackTheBox
+            <img alt="HackTheBox" src="/assets/images/hackthebox.webp" width="10" height="10" /> HackTheBox
           </a>
         </li>
       {% endif %}
-    
-      {% if author.tutorial %}
-        <a href="http://www.tutorialehtml.com/" title="HTML link image example">
-          <img alt="imagen html de ejemplo" src="/assets_tutorials/img/image.jpg" width="120" height="75" />
-       </a>
-      {% endif %}
+
       {% include author-profile-custom-links.html %}
     </ul>
   </div>
