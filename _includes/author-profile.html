@@ -265,6 +265,14 @@
         </li>
       {% endif %}
 
+      {% if author.HackTheBox %}
+        <li>
+          <a href="https://app.hackthebox.eu/profile/{{ author.HackTheBox }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-vine" aria-hidden="true"></i> HackTheBox
+          </a>
+        </li>
+      {% endif %}
+
       {% include author-profile-custom-links.html %}
     </ul>
   </div>
