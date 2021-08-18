@@ -21,7 +21,11 @@ tags:
 
 Script automatizado para la intrusión como www-data: [https://pastebin.com/epNw7PSz](https://pastebin.com/epNw7PSz)
 
-![Untitled](/assets/images/tenet/Untitled.png)
+<div>
+<p style = 'text-align:center;'>
+<img src="https://fmash16.github.io/img/htb_tenet/card.png" alt="" width="600px">
+</p>
+</div>
 
 <div>
 <p style = 'text-align:center;'>
