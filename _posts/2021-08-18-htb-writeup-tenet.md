@@ -15,6 +15,7 @@ tags:
   -   Web
   -   Wordpress
   -   PHP Deserialization
+  -   Scripting
 ---
 
 # Tenet
