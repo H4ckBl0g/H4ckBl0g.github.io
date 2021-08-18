@@ -1,10 +1,33 @@
+---
+layout: single
+title: Tenet - Hack The Box
+excerpt: "Tenet es una maquina perfecta para aprender PHP, me ha obligado a leerme mucho codigo php y entender a bajo nivel como funciona la serializacion y deserializacion de codigo PHP, luego la escalada me ha gustado bastante, esta vez no es abusando de un permiso o cualquier cosa, esta vez hay que pensar bien como se puede vulnerar y aprovecharnos de un script"
+date: 2021-08-18
+classes: wide
+header:
+  teaser: /assets/images/Tenet/Untitled.png
+  teaser_home_page: true
+  icon: /assets/images/hackthebox.webp
+categories:
+  - hackthebox
+  - infosec
+tags:
+  -   Web
+  -   Wordpress
+  -   PHP Deserialization
+---
+
 # Tenet
 
 Script automatizado para la intrusión como www-data: [https://pastebin.com/epNw7PSz](https://pastebin.com/epNw7PSz)
 
-![Untitled](Tenet%202777c64706084eff821556515ad48f60/Untitled.png)
+![Untitled](/assets/images/Tenet/Untitled.png)
 
-![Untitled](Tenet%202777c64706084eff821556515ad48f60/Untitled%201.png)
+<div>
+<p style = 'text-align:center;'>
+<img src="https://0xdf.gitlab.io/img/tenet-radar.png" alt="" width="250px">
+</p>
+</div>
 
 # **ENUMERACION**
 
@@ -46,7 +69,7 @@ No nos muestra informacion asi que puedo estar pensando que por detras se esta r
 10.10.10.223    tenet.htb
 ```
 
-![Untitled](Tenet%202777c64706084eff821556515ad48f60/Untitled%202.png)
+![Untitled](/assets/images/Tenet/Untitled%202.png)
 
 Estamos ante un Wordpress, con la herramienta wpscan podemos enumerar muchas cosas, entre ellas informacion de la pag web y usuarios:
 
@@ -95,7 +118,7 @@ No encontramos nada interesante, asi que enumeramos la pagina nosotros mismos, e
 
 Esto me hace pensar que puede haber algun archivo llamado sator.php alojado en la maquina, despues de probar en varios directorios pruebo a ver si existe el subdominio sator para el dominio tenet.htb:
 
-![Untitled](Tenet%202777c64706084eff821556515ad48f60/Untitled%203.png)
+![Untitled](/assets/images/Tenet/Untitled%203.png)
 
 ```bash
 ❯ cat /etc/hosts
@@ -107,7 +130,7 @@ Esto me hace pensar que puede haber algun archivo llamado sator.php alojado en l
 
 Existe y tambien existe el archivo sator.php
 
-![Untitled](Tenet%202777c64706084eff821556515ad48f60/Untitled%204.png)
+![Untitled](/assets/images/Tenet/Untitled%204.png)
 
 Pero y a que se referia con el backup, pues algo posible a enumerar es probar extensiones relacionadas con backups como por ejemplo .bak
 
@@ -115,7 +138,7 @@ Pero y a que se referia con el backup, pues algo posible a enumerar es probar ex
 
 BA-K es la extensión de archivo utilizada por un gran número de diferentes aplicaciones para almacenar datos de copia de seguridad.
 
-![Untitled](Tenet%202777c64706084eff821556515ad48f60/Untitled%205.png)
+![Untitled](/assets/images/Tenet/Untitled%205.png)
 
 Lo abrimos y podemos ver el codigo fuente de la pagina sator.php:
 
