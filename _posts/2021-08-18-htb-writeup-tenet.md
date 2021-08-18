@@ -76,7 +76,7 @@ No nos muestra informacion asi que puedo estar pensando que por detras se esta r
 
 ![Untitled](/assets/images/tenet/Untitled%202.png)
 
-Estamos ante un Wordpress, con la herramienta wpscan podemos enumerar muchas cosas, entre ellas informacion de la pag web y usuarios:
+Estamos ante un Wordpress, con la herramienta `wpscan` podemos enumerar muchas cosas, entre ellas informacion de la pag web y usuarios:
 
 ```bash
 ❯ whatweb http://tenet.htb/ > whatweb2                                                                                                                                                                                                                                         
