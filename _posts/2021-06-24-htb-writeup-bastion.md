@@ -14,6 +14,7 @@ categories:
 tags:
   - SMB  
   - Active Direcotry
+  - OSCP
 ---
 
 

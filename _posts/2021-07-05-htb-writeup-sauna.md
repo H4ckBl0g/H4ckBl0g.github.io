@@ -14,6 +14,7 @@ categories:
 tags:
   -   Active Directory
   -   ASP-RESP Roasting
+  -   OSCP
 ---
 
 # Sauna HTB

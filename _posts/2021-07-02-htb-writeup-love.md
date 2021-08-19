@@ -14,6 +14,7 @@ categories:
 tags:
   -  SSRF 
   -  AlwaysInstallElevated
+  -  OSCP
 ---
 
 # Love HTB

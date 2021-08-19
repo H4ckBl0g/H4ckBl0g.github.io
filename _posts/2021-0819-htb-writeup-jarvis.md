@@ -15,6 +15,7 @@ tags:
   -   Web
   -   SQLi
   -   SUID
+  -   OSCP
 ---
 
 <div>
