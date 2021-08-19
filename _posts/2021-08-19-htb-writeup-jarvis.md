@@ -5,7 +5,7 @@ excerpt: "Jarvis es una buena maquina para practicar SQLi, gracias a ello conseg
 date: 2021-08-19
 classes: wide
 header:
-  teaser: /assets/images/Jarvis/Untitled.png
+  teaser: /assets/images/Jarvis/logo.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
