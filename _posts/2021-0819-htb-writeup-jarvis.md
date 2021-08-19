@@ -1,3 +1,34 @@
+---
+layout: single
+title: Jarvis - Hack The Box
+excerpt: "Jarvis es una buena maquina para practicar SQLi, gracias a ello conseguimos un hash de la contraseña DBadmin para luego acceder al panel phpmyadmin, luego el acceso al sistema es bsatante sencillo, pero hay que convertirse en un usuario para luego escalar privilegios mediante un binario SUID"
+date: 2021-08-19
+classes: wide
+header:
+  teaser: /assets/images/Jarvis/Untitled.png
+  teaser_home_page: true
+  icon: /assets/images/hackthebox.webp
+categories:
+  - hackthebox
+  - infosec
+tags:
+  -   Web
+  -   SQLi
+  -   SUID
+---
+
+<div>
+<p style = 'text-align:center;'>
+<img src="https://sckull.github.io/images/posts/htb/jarvis/cover.webp" alt="" width="600px">
+</p>
+</div>
+
+<div>
+<p style = 'text-align:center;'>
+<img src="https://0xdf.gitlab.io/img/jarvis-radar.png" alt="" width="250px">
+</p>
+</div>
+
 # Jarvis
 
 # **ENUMERACION**
@@ -47,7 +78,7 @@ http://10.10.10.143:64999 [200 OK] Apache[2.4.25], Country[RESERVED][ZZ], HTTPSe
 
 En la pagina encontramos el nombre del dominio, lo agregamos al /etc/hosts
 
-![Untitled](Jarvis%20814050281e0a4aedb1f680fcbe5d45a6/Untitled.png)
+![Untitled](/assets/images/Jarvis/Untitled.png)
 
 ```bash
 ❯ cat /etc/hosts
@@ -59,7 +90,7 @@ En la pagina encontramos el nombre del dominio, lo agregamos al /etc/hosts
 
 Investigando por la pagina entramos un archivo php al cual si le pasamos el parametro cod nos devuelve informacion, este tipo de codigo es propenso a ser vulnerable si no esta bien sanitizado, vamos a intentar realizar una SQLi:
 
-![Untitled](Jarvis%20814050281e0a4aedb1f680fcbe5d45a6/Untitled%201.png)
+![Untitled](/assets/images/Jarvis/Untitled%201.png)
 
 # **EXPLOTACION**
 
@@ -69,7 +100,7 @@ Inyección SQL es un método de infiltración de código intruso que se vale de 
 
 Tiene una blacklist de algunos parametros que bloquea la IP durante 90 segundos, vamos  a intentar realizarla de otra forma:
 
-![Untitled](Jarvis%20814050281e0a4aedb1f680fcbe5d45a6/Untitled%202.png)
+![Untitled](/assets/images/Jarvis/Untitled%202.png)
 
 Trato de hacer manualmente una inyección sql para ver cuantas columnas tiene la base de datos:
 
@@ -79,17 +110,17 @@ Encontramos el numero de columnas:
 
 `http://10.10.10.143/room.php?cod=7 UNION SELECT 1,2,3,4,5,6,7--+`
 
-![Untitled](Jarvis%20814050281e0a4aedb1f680fcbe5d45a6/Untitled%203.png)
+![Untitled](/assets/images/Jarvis/Untitled%203.png)
 
 Podemos enumerar la base de datos:
 
-![Untitled](Jarvis%20814050281e0a4aedb1f680fcbe5d45a6/Untitled%204.png)
+![Untitled](/assets/images/Jarvis/Untitled%204.png)
 
 Lo primero a enumerar es el nombre de las base de datos y cuantas existen:
 
 `http://10.10.10.143/room.php?cod=7 UNION SELECT 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c)e,4,5,6,7+fRoM+information_schema.schemata--+`
 
-![Untitled](Jarvis%20814050281e0a4aedb1f680fcbe5d45a6/Untitled%205.png)
+![Untitled](/assets/images/Jarvis/Untitled%205.png)
 
 Hay 4 base de datos, vamos a enumerar hotel y mysql:
 
@@ -114,7 +145,7 @@ DBadmin|*2D2B7A5E4E637B8FBA1D17F40318F277D29964D0
 
 Tiramos de CrackStation para ir mas rapido a la hora de crackear contraseñas:
 
-![Untitled](Jarvis%20814050281e0a4aedb1f680fcbe5d45a6/Untitled%206.png)
+![Untitled](/assets/images/Jarvis/Untitled%206.png)
 
 Tenemos una contraseña, ¿pero de que? voy a enumerar la pagina web con wfuzz para ver si encuentro algún login:
 
@@ -137,7 +168,7 @@ ID           Response   Lines    Word       Chars       Payload
 
 Hemos accedido al panel de phpmyadmin: `DBadmin:imissyou`
 
-![Untitled](Jarvis%20814050281e0a4aedb1f680fcbe5d45a6/Untitled%207.png)
+![Untitled](/assets/images/Jarvis/Untitled%207.png)
 
 # **GANANDO ACCESO AL SISTEMA**
 
