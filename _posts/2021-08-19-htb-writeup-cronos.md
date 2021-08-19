@@ -1,3 +1,37 @@
+---
+layout: single
+title: Cronos - Hack The Box
+excerpt: "Me ha gustado mucho la maquina Cronos porque para ser una maquina de dificultad media me ha llevado muy poco tiempo realizarla, he sabido rapidamente por donde atacar, la herramienta dig nos reporta informacion muy valiosa y con una simple SQLi bypasseamos el login, luego encontrar la forma de explotar la utilidad ha sido bastante facil, y el privesc mejor no os cuento nada y así mirais el writeup :)"
+date: 2021-08-19
+classes: wide
+header:
+  teaser: /assets/images/Cronos/logo.png
+  teaser_home_page: true
+  icon: /assets/images/hackthebox.webp
+categories:
+  - hackthebox
+  - infosec
+tags:
+  -   Web
+  -   SQLi
+  -   PHP
+  -   DNS Zone Transfer
+  -   OSCP
+  -   Scripting
+---
+
+<div>
+<p style = 'text-align:center;'>
+<img src="https://static.wixstatic.com/media/5840e3_884dd15abf624a71b6ef83019d8abf03~mv2.png/v1/fit/w_582%2Ch_324%2Cal_c/file.png" alt="" width="600px">
+</p>
+</div>
+
+<div>
+<p style = 'text-align:center;'>
+<img src="https://0xdf.gitlab.io/img/cronos-radar.png" alt="" width="250px">
+</p>
+</div>
+
 # Cronos
 
 Script que automatiza la intrusion como www-data: [https://pastebin.com/nh9Z8Lb4](https://pastebin.com/nh9Z8Lb4)
@@ -73,11 +107,11 @@ http://cronos.htb/ [200 OK] Apache[2.4.18], Cookies[XSRF-TOKEN,laravel_session],
 
 ## **BYPASS LOGIN SQLi**
 
-![Untitled](Cronos%20c1f6523352f747d1ada44b9a3964fd9f/Untitled.png)
+![Untitled](/assets/images/Cronos/Untitled.png)
 
 La pagina admin.cronos.htb es vulnerable a inyeccion SQL, por lo que hemos burlado el panel de inicio de sesion:
 
-![Untitled](Cronos%20c1f6523352f747d1ada44b9a3964fd9f/Untitled%201.png)
+![Untitled](/assets/images/Cronos/Untitled%201.png)
 
 # **EXPLOTACION**
 
@@ -97,7 +131,7 @@ hola me llamo root
 hola me llamo root
 ```
 
-![Untitled](Cronos%20c1f6523352f747d1ada44b9a3964fd9f/Untitled%202.png)
+![Untitled](/assets/images/Cronos/Untitled%202.png)
 
 ```bash
 ❯ tcpdump -i tun0 icmp -n
@@ -115,7 +149,7 @@ listening on tun0, link-type RAW (Raw IP), snapshot length 262144 bytes
 
 Podemos inyectar comandos en esta utilidad, vamos a comprobar si la maquina tiene la herramienta curl:
 
-![Untitled](Cronos%20c1f6523352f747d1ada44b9a3964fd9f/Untitled%203.png)
+![Untitled](/assets/images/Cronos/Untitled%203.png)
 
 ```bash
 ❯ python3 -m http.server 80
@@ -142,7 +176,7 @@ Y montarnos un servidor http con python y hacer un curl hacia nuestra IP y pipea
 
 `nc -nlvp 443`
 
-![Untitled](Cronos%20c1f6523352f747d1ada44b9a3964fd9f/Untitled%204.png)
+![Untitled](/assets/images/Cronos/Untitled%204.png)
 
 ```bash
 ❯ python3 -m http.server 80
