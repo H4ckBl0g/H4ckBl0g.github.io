@@ -345,7 +345,7 @@ connect to [10.10.16.198] from (UNKNOWN) [10.10.10.143] 54402
 whoami
 pepper
 pepper@jarvis:~$ cat user.txt 
-2afa36c4f05b37b34259c---------
+2afa36c4f05b37b3425c---------
 ```
 
 # **ESCALACION DE PRIVILEGIOS**
