@@ -2,7 +2,7 @@
 layout: single
 title: Knife - Hack The Box
 excerpt: "En esta máquina vuelve a ser muy importante la enumeración de servicios y conocer muy bien si las versiones que usan(en este caso PHP) tienen vulnerabilidades, gracias a ello conseguiremos entrar en la maquina y la escalada de privilegios será pan comido"
-date: 2021-08-26
+date: 2021-08-28
 classes: wide
 header:
   teaser: /assets/images/Knife/Untitled.png
