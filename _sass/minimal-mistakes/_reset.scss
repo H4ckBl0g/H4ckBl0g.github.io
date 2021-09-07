@@ -186,3 +186,16 @@ textarea {
   overflow: auto; /* remove vertical scrollbar in IE6-9*/
   vertical-align: top; /* readability and alignment cross-browser*/
 }
+
+img {
+  /* Responsive images (ensure images don't scale beyond their parents) */
+  max-width: 100%; /* part 1: Set a maximum relative to the parent*/
+  width: auto\9; /* IE7-8 need help adjusting responsive images*/
+  height: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/
+
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  border: 1.5px solid #00c7ff;
+  border-radius: 12px 12px;
+}
