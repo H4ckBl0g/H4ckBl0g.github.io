@@ -5,7 +5,7 @@ excerpt: "Sinceramente, Schooled ha sido la maquina que mas me ha gustado de HTB
 date: 2021-09-11
 classes: wide
 header:
-  teaser: /assets/images/Schooled/Untitled.png
+  teaser: /assets/images/schooled/Untitled.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
