@@ -36,3 +36,5 @@ tags:
 </div>
 
 Beep es una maquina de dificultad linux de dificultad facil, es una buena maquina para empezar en el Pentesting, sobretodo porque tiene varias formas de obtener acceso a la maquina y de escalar privilegios. Es muy sencillita y tocamos formas de bypassear una subida de un archivo php y escalar privilegios con permisos sudo.
+
+<iframe width="500" height="315" src="https://www.youtube.com/embed/zB-M4rsYmHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
