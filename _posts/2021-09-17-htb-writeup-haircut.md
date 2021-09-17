@@ -5,7 +5,7 @@ excerpt: "Buenas hoy os traigo el Video-WriteUp de esta maquina, la he estado ex
 date: 2021-09-16
 classes: wide
 header:
-  teaser: /assets/images/Beep/Untitled.png
+  teaser: /assets/images/haircut/Untitled.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
