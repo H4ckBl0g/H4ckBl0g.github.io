@@ -24,6 +24,29 @@ tags:
 
 Buenas! Hoy os voy a compartir como utilizar una herramienta de Hak5, aunque también se puede hacer de forma casera, en mi caso es el RubberDucky de Hak5.
 
+Imagínese enchufar una unidad USB aparentemente inocente en una computadora e instalar puertas traseras, filtrar documentos o capturar credenciales.
+
+El USB Rubber Ducky inyecta pulsaciones de teclas a velocidades sobrehumanas, violando la confianza inherente que las computadoras tienen en los humanos al hacerse pasar por un teclado.
+
+Mencionar algunos ataques brevemente:
+* Recolección de información del sistema operativo.
+* Robar información importante de los navegadores de Internet.
+* Robar y usar las cookies de las sesiones abiertas.
+* Hacer capturas de pantalla del escritorio y carpetas importantes del sistema.
+* Robar y utilizar las contraseñas de las conexiones WiFi de la víctima.
+* Subir la información a traves un servidor FTP.
+
+ Ataques dirigidos al sistema:
+* Agregar usuarios con permisos administrativos al equipo de la víctima.
+* Borrar usuarios del sistema.
+* Hacer Pharming de DNS.
+* Infección del sistema descargando y ejecutando un binario de Internet.
+* Crackear passwords del administrador en el sistema.
+* Crear un Backdoor WiFi.
+* Bloquear programas en el sistema operativo de forma sigilosa.
+
+Despues de esta breve introduccion, vamos a lo que nos interesa, ¿Cómo se pone en marcha este dispositivo?
+
 El RubberDucky se compone de estos elementos:
 
 ![Untitled](/assets/images/RubberDuckyRevShell/Untitled%201.png)
