@@ -1,12 +1,32 @@
+---
+layout: single
+title: POC Rubber Ducky Rev Shell
+excerpt: "Buenas! Hoy os voy a compartir como utilizar una herramienta de Hak5, aunque también se puede hacer de forma casera, en mi caso es el RubberDucky de Hak5."
+date: 2021-09-20
+classes: wide
+header:
+  teaser: /assets/images/RubberDuckyRevShell/Untitled.png
+  teaser_home_page: true
+  icon: 
+categories:
+  - POC RubberDucky
+  - infosec
+tags:
+  -   POC
+  -   Video
+  -   RubberDucky
+  -   Reverse Shell
+---
+
 # Rubber Ducky Rev Shell
 
-![Untitled](Rubber%20Ducky%20Rev%20Shell%202a59b0b6d05c41abbb71075f89263124/Untitled.png)
+![Untitled](/assets/images/RubberDuckyRevShell/Untitled.png)
 
 Buenas! Hoy os voy a compartir como utilizar una herramienta de Hak5, aunque también se puede hacer de forma casera, en mi caso es el RubberDucky de Hak5.
 
 El RubberDucky se compone de estos elementos:
 
-![Untitled](Rubber%20Ducky%20Rev%20Shell%202a59b0b6d05c41abbb71075f89263124/Untitled%201.png)
+![Untitled](/assets/images/RubberDuckyRevShell/Untitled%201.png)
 
 El 1º elemento es una tarjeta MicroSD de 128mb en este caso
 
@@ -22,7 +42,7 @@ En este caso voy a programar una reverse shell a mi equipo en el Rubberducky, po
 
 Y programaremos los comandos que se van a ejecutar cuando ingresemos el RubberDucky:
 
-![Untitled](Rubber%20Ducky%20Rev%20Shell%202a59b0b6d05c41abbb71075f89263124/Untitled%202.png)
+![Untitled](/assets/images/RubberDuckyRevShell/Untitled%202.png)
 
 En la primera parte ingresaremos nuestro código:
 
@@ -87,17 +107,17 @@ listening on [any] 443 ...
 
 Meter el inject.bin descargado en la MicroSD
 
-![Untitled](Rubber%20Ducky%20Rev%20Shell%202a59b0b6d05c41abbb71075f89263124/Untitled%203.png)
+![Untitled](/assets/images/RubberDuckyRevShell/Untitled%203.png)
 
 Sacamos la MicroSD y la metemos en el RubberDucky:
 
-![Untitled](Rubber%20Ducky%20Rev%20Shell%202a59b0b6d05c41abbb71075f89263124/Untitled%204.png)
+![Untitled](/assets/images/RubberDuckyRevShell/Untitled%204.png)
 
 ## 4º Paso
 
 Metemos el RubberDucky al sistema Windows que queremos vulnerar:
 
-Video aqui
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/coCoG7R6XKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 De esta forma conseguimos ganar acceso a un sistema en tan solo 10 segundos.
 
@@ -128,10 +148,10 @@ STRING exit
 ENTER
 ```
 
-![Untitled](Rubber%20Ducky%20Rev%20Shell%202a59b0b6d05c41abbb71075f89263124/Untitled%205.png)
+![Untitled](/assets/images/RubberDuckyRevShell/Untitled%205.png)
 
 Se ejecutaría de esta forma:
 
-2 Video aqui
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lKdGUfEHlO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Como vemos es una herramienta muy sencilla de utilizar, espero que os haya gustado, si veo que a la gente le gusta quizás traiga otros scripts mas adelante.
