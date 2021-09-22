@@ -18,7 +18,13 @@ tags:
   -   Docker
 ---
 
-# Monteverde HTB
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
+# Monteverde 
 
 Hola muy buenas a todos! Hoy voy a estar resolviendo la maquina Monteverde de  HTB, es una maquina Windows de dificultad media, en la que vamos a aprender cosas nuevas de Directorio Activo, en mi opinion es muy importante este tema, ya que el 90% de las empresas lo usan, para el que no sepa que es aqui les dejo una deficion:
 

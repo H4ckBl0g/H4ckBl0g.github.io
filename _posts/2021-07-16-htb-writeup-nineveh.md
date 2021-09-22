@@ -21,6 +21,12 @@ tags:
   -   OSCP
 ---
 
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
 # Nineveh
 
 Buenas, hoy voy a enseñaros a como jikiar la maquina Nineveh, es una maquina linux de dificultad media. 

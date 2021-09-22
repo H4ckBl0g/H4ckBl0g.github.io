@@ -17,9 +17,16 @@ tags:
   - OSCP
 ---
 
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
+# Active
 ![/assets/images/Active/0.png](/assets/images/Active/0.png)
 
-# Write up Active HTB
+ 
 
 Hoy vamos a estar resolviendo la maquina Active de HTB, es una maquina Windows de dificultad fácil. En la que vamos a enumerar puertos y buscar en el puerto 445 (SMB) algunos ficheros que no deberíamos de tener acceso.
 

@@ -17,7 +17,13 @@ tags:
   -  OSCP
 ---
 
-# Love HTB
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
+# Love 
 
 Buenas hoy voy a enseñaros como resolver la maquina Love de dificultad fácil y sistema operativo Windows.
 

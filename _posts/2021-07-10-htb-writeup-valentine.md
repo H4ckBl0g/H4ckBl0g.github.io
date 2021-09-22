@@ -17,7 +17,13 @@ tags:
   -   OSCP
 ---
 
-# Valentine HTB
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
+# Valentine 
 
 Buenas! Hoy os traigo la maquina Valentine, una maquina linux de dificultad fácil, en ella vamos a ver la vulnerabilidad llamada HeartBleed CVE-2014-0160, el cual nos dara un hash que al decodear nos muestra una contraseña, para luego usarla en una clave id_rsa (SSH) protegida con contraseña, después la escalada será pan comido. Os dejo por aquí información de la maquina:
 

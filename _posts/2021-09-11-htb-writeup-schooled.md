@@ -20,6 +20,12 @@ tags:
 
 <div>
 <p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
+<div>
+<p style = 'text-align:center;'>
 <img src="https://fmash16.github.io/img/htb_schooled/card.png" alt="" width="600px">
 </p>
 </div>

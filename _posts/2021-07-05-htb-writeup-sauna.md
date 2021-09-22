@@ -17,7 +17,13 @@ tags:
   -   OSCP
 ---
 
-# Sauna HTB
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
+# Sauna 
 
 Buenas a todos, hoy voy a estar resolviendo la maquina Sauna de HackTheBox, es una maquina Windows de dificultad facil, en ella vamos a tocar Directorio Activo.
 

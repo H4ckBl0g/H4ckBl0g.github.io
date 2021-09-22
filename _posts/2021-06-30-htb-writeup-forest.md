@@ -19,7 +19,13 @@ tags:
   - OSCP
 ---
 
-# Forest HTB
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
+# Forest 
 
 Hoy vamos a estar resolviendo la maquina Forest, una maquina Windows de dificultad fácil, es una de las maquinas retiradas de HackTheBox pero este mes de Julio estarán disponibles para hacer de forma gratuita.
 

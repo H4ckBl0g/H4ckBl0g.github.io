@@ -17,9 +17,13 @@ tags:
   - OSCP
 ---
 
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
 
-
-# Bastion HTB
+# Bastion 
 
 Hola muy buenas a todos! Hoy voy a estar resolviendo la maquina Bastión de HTB, es una maquina Windows de dificultad fácil. Es una de las máquinas Windows de HTB que recomiendan para prepararse el OSCP:
 

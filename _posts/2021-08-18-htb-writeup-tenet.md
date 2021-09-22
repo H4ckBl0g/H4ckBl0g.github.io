@@ -18,6 +18,12 @@ tags:
   -   Scripting
 ---
 
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
 # Tenet
 
 Script automatizado para la intrusión como www-data: [https://pastebin.com/epNw7PSz](https://pastebin.com/epNw7PSz)

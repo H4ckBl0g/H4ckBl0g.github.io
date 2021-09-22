@@ -20,6 +20,14 @@ tags:
   -   Scripting
 ---
 
+# Cronos
+
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
 <div>
 <p style = 'text-align:center;'>
 <img src="https://static.wixstatic.com/media/5840e3_884dd15abf624a71b6ef83019d8abf03~mv2.png/v1/fit/w_582%2Ch_324%2Cal_c/file.png" alt="" width="600px">
@@ -32,7 +40,6 @@ tags:
 </p>
 </div>
 
-# Cronos
 
 Script que automatiza la intrusion como www-data: [https://pastebin.com/nh9Z8Lb4](https://pastebin.com/nh9Z8Lb4)
 
