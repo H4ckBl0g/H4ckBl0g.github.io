@@ -1,6 +1,33 @@
+---
+layout: single
+title: Poison - Hack The Box
+excerpt: "Poison es la maquina linux perfecta para aprender sobre Log Poisoning, tambien me ha dado mucha libertad para crear mis scripts y practicar python, espero que os guste mi WriteUp"
+date: 2021-11-15
+classes: wide
+header:
+  teaser: /assets/images/Poison/Untitled.png
+  teaser_home_page: true
+  icon: /assets/images/hackthebox.webp
+categories:
+  - hackthebox
+  - infosec
+tags:
+  -   Web
+  -   Log Poisoning
+  -   OSCP
+  -   Scripting
+  -   VNC
+---
+
+<div>
+<p style = 'text-align:center;'>
+<img src="http://www.hackthebox.eu/badge/image/497437" alt="" width="200px">
+</p>
+</div>
+
 # Poison
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled.png)
+![Untitled](/assets/images/Poison/Untitled.png)
 
 ### INDICE
 
@@ -15,11 +42,11 @@ Obtenemos la IP de la platarforma de HackTheBox, gracias a la herramienta ping o
 
 `ping -c 1 10.10.10.84`
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%201.png)
+![Untitled](/assets/images/Poison/Untitled%201.png)
 
 Tiene 63 de TTL, gracias a esto sabemos que estamos delante de una maquina de SO Linux. Todas las maquinas Linux tienen de TTL 64, en este caso tiene 63 por que no tenemos ping directo con la maquina, esto quiere decir que pasa por unos nodos intermediarios que hacen que el TTL disminuya, como vemos en la siguiente imagen:
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%202.png)
+![Untitled](/assets/images/Poison/Untitled%202.png)
 
 Una vez que sabemos el SO de la victima, vamos a proceder a escanear los puertos de la misma.
 
@@ -31,29 +58,29 @@ Con este comando realizamos un escaneo rápido de los puertos abiertos por TCP
 
 `nmap -sS --min-rate 5000 --open -p- -vvv -n -Pn 10.10.10.84 -oG allPorts`
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%203.png)
+![Untitled](/assets/images/Poison/Untitled%203.png)
 
 Vemos que tiene abiertos los puertos 22 y 80. Realizamos otro escaneo mas exhaustivo de estos puertos. Con el siguiente comando realizamos un escaneo de versiones y también `nmap` lanza una serie de scripts básicos de enumeración.
 
 `nmap -sCV -p22,80 10.10.10.84 -oN scanPorts`
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%204.png)
+![Untitled](/assets/images/Poison/Untitled%204.png)
 
 `nmap` no nos reporta nada interesante aparte de las versiones que usan estos servicios. Antes de entrar en la pagina web que se ejecuta en el puerto 80, voy a enumerar un poco mas con la herramienta `whatweb`
 
 `whatweb http://10.10.10.84`
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%205.png)
+![Untitled](/assets/images/Poison/Untitled%205.png)
 
 Vemos la versión de PHP y Apache que usa la web.
 
 Ahora procedemos a enumerar la web a mano.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%206.png)
+![Untitled](/assets/images/Poison/Untitled%206.png)
 
 Si le pasamos uno de los archivos que nos sugiere nos ejecuta ese archivo .php
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%207.png)
+![Untitled](/assets/images/Poison/Untitled%207.png)
 
 En la URL podemos ver que utiliza `/browse.pgp?file=` . Podría usar esto para listar archivos del sistema usando la vulnerabilidad web llamada LFI (Local File Inclusion).
 
@@ -61,11 +88,11 @@ En la URL podemos ver que utiliza `/browse.pgp?file=` . Podría usar esto para l
 
 Pero antes el archivo listfiles.php nos muestra esta informacion.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%208.png)
+![Untitled](/assets/images/Poison/Untitled%208.png)
 
 Esto me hace pensar que puede haber una rchivo llamado pwdbackup.txt en esta ruta y que podemos ver su contenido.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%209.png)
+![Untitled](/assets/images/Poison/Untitled%209.png)
 
 Hay una contraseña encodeada 13 veces, podemos decodearla en la pagina web :
 
@@ -73,7 +100,7 @@ Hay una contraseña encodeada 13 veces, podemos decodearla en la pagina web :
 
 Deslizamos `From Base64` a `Recipe` 13 veces para decodearla 13 veces y vemos una contraseña:
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2010.png)
+![Untitled](/assets/images/Poison/Untitled%2010.png)
 
 `Charix!2#4%6&8(0`
 
@@ -125,7 +152,7 @@ if __name__ == '__main__':
 
 [https://pastebin.com/A4eGdwRv](https://pastebin.com/A4eGdwRv)
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2011.png)
+![Untitled](/assets/images/Poison/Untitled%2011.png)
 
 Encontramos la ruta `/var/log/httpd-access.log`
 
@@ -133,21 +160,21 @@ accedemos a ella y vemos el registro de unos logs, un ataque que se podría real
 
 [https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1](https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1)
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2012.png)
+![Untitled](/assets/images/Poison/Untitled%2012.png)
 
 Vemos que nos muestra el User-Agent de peticiones que se realizan a la web, algo que se podría intentar seria intentar inyectar codigo php en User-Agent de una petición a la pagina web y mirar en esta ruta si nos esta ejecutando el comando.
 
 En el phpinfo.php de la pagina web no tiene ninguna desable_function por lo que podriamos llegar a ejecutar comandos con inyecciones php.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2013.png)
+![Untitled](/assets/images/Poison/Untitled%2013.png)
 
 Capturamos una petición a la web con BurpSuite y modificamos el User-Agent a nuestro antojo.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2014.png)
+![Untitled](/assets/images/Poison/Untitled%2014.png)
 
 Y en la pagina web intentamos ejecutar algun comando:
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2015.png)
+![Untitled](/assets/images/Poison/Untitled%2015.png)
 
 Puedo ejecutar comandos en la maquina.
 
@@ -207,51 +234,51 @@ if __name__ == '__main__':
     makeRequest()
 ```
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2016.png)
+![Untitled](/assets/images/Poison/Untitled%2016.png)
 
 Nos enviamos una Reverse Shell a nuestro equipo:
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2017.png)
+![Untitled](/assets/images/Poison/Untitled%2017.png)
 
 Ya hemos ganado acceso, vemos que hay un usuario llamado charix
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2018.png)
+![Untitled](/assets/images/Poison/Untitled%2018.png)
 
 Podemos intentar conectarnos por ssh con ese usuario y la contraseña que habiamos extraido de la web.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2019.png)
+![Untitled](/assets/images/Poison/Untitled%2019.png)
 
 Hemos ganado acceso como el usuario Charix, podemos ver la flag user
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2020.png)
+![Untitled](/assets/images/Poison/Untitled%2020.png)
 
 Tambien encontramos un archivo llamado secret.zip
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2021.png)
+![Untitled](/assets/images/Poison/Untitled%2021.png)
 
 Nos lo pasamos a nuestro equipo para descomprimirlo.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2022.png)
+![Untitled](/assets/images/Poison/Untitled%2022.png)
 
 Nos pide una contraseña para poder descomprimirlo, antes de usar cualquier herramienta para romper la contraseña hay que utilizar las contraseñas que ya tengamos, en este caso la contraseña del usuario charix.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2023.png)
+![Untitled](/assets/images/Poison/Untitled%2023.png)
 
 Ha funcionado, pero el texto no es legible.
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2024.png)
+![Untitled](/assets/images/Poison/Untitled%2024.png)
 
 Haciendo un reconocimiento del sistema, encuentro que hay un sercicio vnc
 
 `ps -auwwx | grep vnc`
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2025.png)
+![Untitled](/assets/images/Poison/Untitled%2025.png)
 
 Este servicio suele ejecutarse en el puerto 5901
 
 `netstat -an -p tcp`
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2026.png)
+![Untitled](/assets/images/Poison/Untitled%2026.png)
 
 ## 4. ESCALACIÓN DE PRIVILEGIOS
 
@@ -261,11 +288,11 @@ En esta pagina nos dice como podríamos aprovecharnos de este servicio
 
 Siguiendo las pautas, podemos conectarnos con kali a la máquina víctima de la siguiente forma: con el comando vncviewer y utilizando un archivo de contraseña (secret) configuramos nuestro proxychain de esta forma
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2027.png)
+![Untitled](/assets/images/Poison/Untitled%2027.png)
 
 Nos conectamos por ssh de nuevo pero pasando por el proxy configurado
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2028.png)
+![Untitled](/assets/images/Poison/Untitled%2028.png)
 
 Ahora que estamos usando el proxychains, nos conectamos al servicio VNC con proxychains proporcinando el archivo secret
 
@@ -273,4 +300,4 @@ Ahora que estamos usando el proxychains, nos conectamos al servicio VNC con prox
 
 Hemos conseguido acceso remoto a la maquina con vncviewer y como el usuario root
 
-![Untitled](Poison%202c71b5109b144f36834b9ab0c630b46b/Untitled%2029.png)
+![Untitled](/assets/images/Poison/Untitled%2029.png)
