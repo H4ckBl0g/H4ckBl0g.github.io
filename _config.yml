@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "H4ckBl0g"
   avatar           : "/assets/images/itachi.jpg"
-  bio              : "Ciberseguridad<br>Pentester Junior<br>CTF player<br><br>Certificaciones:<br>Certificado Red Team Expert (CRTE)<br>eLearn Junior Penetration Tester (eJPT)<br>Certificado de Hacking Ético Experto (CHEE)"
+  bio              : "Ciberseguridad<br>Pentester Junior<br>CTF player<br><br>Certificaciones:<br><a href="http://google.com">CRTE</a><br<Certificado Red Team Expert (CRTE)<br>eLearn Junior Penetration Tester (eJPT)<br>Certificado de Hacking Ético Experto (CHEE)"
   location         : "Spain"
   email            : "adrijimsum.pentest@gmail.com"
   uri              :
