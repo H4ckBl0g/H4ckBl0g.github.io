@@ -45,19 +45,23 @@
     
     <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
     <ul class="author__urls social-icons">
+      
       {% if author.CRTE %}
         <li>
           <a href="{{ author.CRTE }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fas fa-certificate" aria-hidden="true"></i> CRTE
           </a>
         </li>
+      {% endif %}
+      
       {% if author.eJPT %}
         <li>
           <a href="{{ author.eJPT }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fas fa-certificate" aria-hidden="true"></i> eJPT
           </a>
-        </li>
+        </li>      
       {% endif %}
+      
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
