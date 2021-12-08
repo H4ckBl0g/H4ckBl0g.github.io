@@ -15,7 +15,7 @@ remote_theme             : "mmistakes/minimal-mistakes@4.15.1"
 minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "es-ES"
 title                    : "H4ckBl0g"
 title_separator          : "-"
 name                     : "adrijmnz"
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "H4ckBl0g"
   avatar           : "/assets/images/itachi.jpg"
-  bio              : "Ciberseguridad<br>Junior Pentester<br>CTF player<br><br>Certificaciones:<br>Certificado Red Team Expert (CRTE)<br>eLearn Junior Penetration Tester (eJPT)<br>Certificado de Hacking Ético Experto (CHEE)"
+  bio              : "Ciberseguridad<br>Pentester Junior<br>CTF player<br><br>Certificaciones:<br>Certificado Red Team Expert (CRTE)<br>eLearn Junior Penetration Tester (eJPT)<br>Certificado de Hacking Ético Experto (CHEE)"
   location         : "Spain"
   email            : "adrijimsum.pentest@gmail.com"
   uri              :
@@ -120,7 +120,7 @@ author:
   keybase          : 
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "adrijimsum"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
