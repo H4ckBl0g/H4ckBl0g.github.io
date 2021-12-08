@@ -42,15 +42,16 @@
   </div>
   
   <div class="author__urls-wrapper">
-    {% if author.CRTE %}
+    
+    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
+    <ul class="author__urls social-icons">
+      {% if author.CRTE %}
         <li>
           <a href="{{}}" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <img style="width: 17px; height:  17px;" alt="" src="https://www.credential.net/539083e6-533b-4e75-a8f0-75a66b47896e#gs.itiilf"/> 
           </a>
         </li>
       {% endif %}
-    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
-    <ul class="author__urls social-icons">
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
