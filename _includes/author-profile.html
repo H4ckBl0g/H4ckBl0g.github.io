@@ -38,7 +38,7 @@
       </p>
     {% endif %}
   </div>
-
+  
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
     <ul class="author__urls social-icons">
@@ -47,7 +47,15 @@
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
         </li>
       {% endif %}
-
+      
+      {% if author.CRTE %}
+        <li>
+          <a href="{{}}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <img style="width: 17px; height:  17px;" alt="" src="https://www.credential.net/539083e6-533b-4e75-a8f0-75a66b47896e#gs.itiilf"/> 
+          </a>
+        </li>
+      {% endif %}
+      
       {% if author.links %}
         {% for link in author.links %}
           {% if link.label and link.url %}
@@ -281,13 +289,6 @@
         </li>
       {% endif %}
       
-      {% if author.CRTE %}
-        <li>
-          <a href="{{}}" itemprop="sameAs" rel="nofollow noopener noreferrer">
-            <img style="width: 17px; height:  17px;" alt="" src="https://www.credential.net/539083e6-533b-4e75-a8f0-75a66b47896e#gs.itiilf"/> 
-          </a>
-        </li>
-      {% endif %}
 
       {% include author-profile-custom-links.html %}
     </ul>
