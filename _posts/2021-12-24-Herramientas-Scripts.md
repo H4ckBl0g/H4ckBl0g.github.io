@@ -1,5 +1,3 @@
-# Herramientas/Scripts
-
 ---
 
 layout: single
