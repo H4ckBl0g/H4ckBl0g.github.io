@@ -21,6 +21,6 @@ tags:
 
 ---
 
-![Untitled](/assets/images/Brute-Force%20Login%20With%20Threads/Untitled2.png)
+
 
 [Brute-Force Login With Threads](Herramientas-Scripts/Brute-Force%20Login%20With%20Threads.md)
