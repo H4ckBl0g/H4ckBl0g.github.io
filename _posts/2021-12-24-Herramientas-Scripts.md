@@ -16,4 +16,4 @@ tags:
   -   Brute-Force
 ---
 
-[Brute-Force-Login-With-Threads](Brute-Force-Login-With-Threads.md)
+[Brute-Force-Login-With-Threads](/_posts/Brute-Force-Login-With-Threads.md)
