@@ -23,4 +23,4 @@ tags:
 
 
 
-[Brute-Force Login With Threads](Herramientas-Scripts/Brute-Force%20Login%20With%20Threads.md)
+[Brute-Force Login With Threads](/Herramientas-Scripts/Brute-Force%20Login%20With%20Threads.md)
