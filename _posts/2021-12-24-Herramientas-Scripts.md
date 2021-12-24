@@ -16,4 +16,6 @@ tags:
   -   Brute-Force
 ---
 
-[Brute-Force-Login-With-Threads](https://h4ckbl0g.github.io/Brute-Force-Login-With-Threads/#)
+### Script de fuerza bruta a un login con hilos
+[Brute Force Login With Threads](https://h4ckbl0g.github.io/Brute-Force-Login-With-Threads/#)
+![Untitled](/assets/images/Brute-Force-Login-With-Threads/Untitled.png)
