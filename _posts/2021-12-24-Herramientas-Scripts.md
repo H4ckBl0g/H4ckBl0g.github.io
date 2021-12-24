@@ -6,7 +6,7 @@ excerpt: "Buenas! He creado este post para compartir con vosotros las herramient
 date: 2021-12-24
 classes: wide
 header:
-teaser: /assets/images/Brute-Force-Login-With-Threads/Untitled2.png
+teaser: /assets/images/Brute-Force-Login-With-Threads/Untitled.png
 teaser_home_page: true
 icon:
 categories:
@@ -21,4 +21,6 @@ tags:
 
 ---
 
-[Brute Force Login With Threads in Python3](Brute-Force-Login-With-Threads.md)
+
+
+[Brute-Force Login With Threads](Brute-Force-Login-With-Threads.md)

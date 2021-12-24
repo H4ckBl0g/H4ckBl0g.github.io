@@ -2,7 +2,7 @@
 
 # [https://pastebin.com/9gW4iGkJ](https://pastebin.com/9gW4iGkJ)
 
-![Untitled](/assets/images/Brute-Force-Login-With-Threads/Untitled.png)
+![Untitled](/assets/images/Brute-Force-Login-With-Threads/Untitled2.png)
 
 He realizado este script ya que he estado investigando un poco y me parecía que no habían muchos scripts en python3 que realicen fuerza bruta a un login, por eso he decidido compartirlo con vosotros.
 
