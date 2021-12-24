@@ -64,7 +64,7 @@ class Color:
 #Funciones
 def usage():
     fNombre = os.path.basename(__file__)
-    ussage = fNombre + ' [-h] -url <URL> [-u USERNAME] [-w DICCIONARIO] [-t HILOS]\n\n'
+    ussage = fNombre + ' [-h] [-url URL] [-u USERNAME] [-w DICCIONARIO] [-t HILOS]\n\n'
     ussage += '[+] Examples:\n'
     ussage += '\t' + fNombre + ' -url https://google.com/login -u admin -w /usr/share/wordlists/rockyou.txt -t 2\n'
     return ussage
@@ -108,8 +108,8 @@ def do_login(s, url, username, password, executor, count, total):
         r = s.post(url, data=post_data, headers=headers_data, allow_redirects = True)
         p1.status(Color.BLUE + "Intentando con la contraseña" + Color.RED + " [%d/" %count + "%d] ==>" %total + Color.GREEN + " %s" %password)        
         #Configuracion de la respuesta del servidor para averiguar la contraseña
-        if "" in r.text:
-            print(Color.BLUE + "\n\nLa contraseña es: " + Color.YELLOW + "%s" % password)
+        if '' in r.text:
+            print(Color.BLUE + "\n\nLa contraseña del usuario " + Color.YELLOW + "%s " %username + Color.BLUE + "es: " + Color.YELLOW + "%s" % password)
             executor.shutdown(wait=False, cancel_futures=True)
             sys.exit(1)
         else:
