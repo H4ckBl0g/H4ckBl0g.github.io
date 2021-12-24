@@ -16,4 +16,4 @@ tags:
   -   Brute-Force
 ---
 
-[Brute-Force-Login-With-Threads](2021-01-01-Brute-Force-Login-With-Threads.md)
+[Brute-Force-Login-With-Threads](https://h4ckbl0g.github.io/Brute-Force-Login-With-Threads/#)
