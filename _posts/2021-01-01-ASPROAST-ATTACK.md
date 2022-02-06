@@ -19,17 +19,17 @@ El ataque `ASREPRoast` busca usuarios sin el atributo requerido de autenticació
 
 Yo estaré utilizando el mismo escenario que cree para el ataque de SMB-Relay.
 
-![Untitled Diagram.drawio (19).png](ASPROAST-ATTACK/Untitled_Diagram.drawio_(19).png)
+![Untitled Diagram.drawio (19).png](/assets/images/ASPROAST-ATTACK/Untitled_Diagram.drawio_(19).png)
 
 En este punto no esta configurado para que sea vulnerable a este ataque, si intentamos realizarlo nos dirá que ningún usuario tiene el atributo “No pedir la autenticación previa de kerberos” activada.
 
-![Untitled](ASPROAST-ATTACK/Untitled.png)
+![Untitled](/assets/images/ASPROAST-ATTACK/Untitled.png)
 
-![Untitled](ASPROAST-ATTACK/Untitled%201.png)
+![Untitled](/assets/images/ASPROAST-ATTACK/Untitled%201.png)
 
 Ninguna cuenta lo tiene activado, para activarlo tenemos que ir al DC y configurar una cuenta activando esta casilla:
 
-![Untitled](ASPROAST-ATTACK/Untitled%202.png)
+![Untitled](/assets/images/ASPROAST-ATTACK/Untitled%202.png)
 
 Se ha activado para el usuario adrianhack, por lo que si ahora realizamos este ataque podremos obtener el **TGT** (Ticket Granting Ticket) del usuario. El TGT (Ticket Granting Ticket) es el ticket
 que se presenta ante el KDC para obtener los TGS. El **TGS** (Ticket Granting Service) es el ticket
@@ -45,11 +45,11 @@ Yo lo realizare desde mi maquina kali.
 
 `impacket-GetNPUsers adricorp.local/ -no-pass -usersfile users`
 
-![Untitled](ASPROAST-ATTACK/Untitled%203.png)
+![Untitled](/assets/images/ASPROAST-ATTACK/Untitled%203.png)
 
 Obtenemos el TGT, el cual podemos romper por fuerza bruta si la contraseña es débil.
 
-![Untitled](ASPROAST-ATTACK/Untitled%204.png)
+![Untitled](/assets/images/ASPROAST-ATTACK/Untitled%204.png)
 
 ### ¿Cómo prevenir este ataque?
 
