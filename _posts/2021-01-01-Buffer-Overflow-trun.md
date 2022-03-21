@@ -16,73 +16,73 @@ Si reflejamos esto en la practica, le pasamos a vulnserver esta cadena:
 
 Miramos en el Inmunity Debugger y hemos conseguido crashear vulnserver y sobrescribir el EIP
 
-![Untitled](Buffer-Ove%20dc636/Untitled.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled.png)
 
 Calculamos el offset con la herramienta de metasploit `patter_create`
 
-![Untitled](Buffer-Ove%20dc636/Untitled%201.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%201.png)
 
-![Untitled](Buffer-Ove%20dc636/Untitled%202.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%202.png)
 
 Miramos en el inmunity debugger el valor del EIP
 
-![Untitled](Buffer-Ove%20dc636/Untitled%203.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%203.png)
 
 Utilizamos la herramienta `pattern_offset` para ver el numero de caracteres en el cual empezamos a sobrescribir el EIP
 
-![Untitled](Buffer-Ove%20dc636/Untitled%204.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%204.png)
 
 hemos sacado el offset de vulnserver y sabemos que tenemos que pasarle 2006 A para sobrescribir el EIP.
 
-![Untitled](Buffer-Ove%20dc636/Untitled%205.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%205.png)
 
 Probamos a sobrescribir el EIP con 4 “B”.
 
-![Untitled](Buffer-Ove%20dc636/Untitled%206.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%206.png)
 
 Ahora comprobamos si hay algún bad_chars, de la siguiente forma:
 
 Enviamos los bad_chars después de sobrescribir el EIP:
 
-![Untitled](Buffer-Ove%20dc636/Untitled%207.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%207.png)
 
 Vamos al inmunity debugger y vemos si en el ESP hay algún bad_char
 
-![Untitled](Buffer-Ove%20dc636/Untitled%208.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%208.png)
 
 Como podemos ver en el ESP no hay ningún bad character, el único que da siempre fallos es el carácter nulo \x00\, nuestro payload no puede tener este carácter.
 
 Ahora tenemos que buscar un modulo vulnerable, con el inmunity debugger podemos encontrarla gracias al modulo mona, ejecutando el comando `!mona modules`
 
-![Untitled](Buffer-Ove%20dc636/Untitled%209.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%209.png)
 
 Vemos que tiene un modulo que no tiene ninguna protección añadida:
 
-![Untitled](Buffer-Ove%20dc636/Untitled%2010.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%2010.png)
 
 Ahora podemos meter código ensamblador en este modulo, para ello lo haremos de la siguiente forma:
 
 Queremos hacer un jump al ESP, con la herramienta `nasm_shell` podemos sacar el valor que tiene que tener para que realice un jmp esp
 
-![Untitled](Buffer-Ove%20dc636/Untitled%2011.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%2011.png)
 
 Con mona buscamos las instrucciones que queremos con el siguiente comando:
 
-![Untitled](Buffer-Ove%20dc636/Untitled%2012.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%2012.png)
 
 Tenemos varios resultados, podemos probar con cualquiera de ellos, ahora en vez de escribir las 4 B, tenemos que escribir la dirección de esos resultados.
 
 ponemos en pausa la dirección que hemos utilizado para poder comprobarlo.
 
-![Untitled](Buffer-Ove%20dc636/Untitled%2013.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%2013.png)
 
-![Untitled](Buffer-Ove%20dc636/Untitled%2014.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%2014.png)
 
 EIP tiene el valor que queremos, ahora solo tenemos que crear nuestro exploit.
 
 ahora puedo empezar a añadir mi código malicioso, de la siguiente manera.
 
-![Untitled](Buffer-Ove%20dc636/Untitled%2015.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%2015.png)
 
 Creamos nuestro script y añadimos el shellcode:
 
@@ -147,4 +147,4 @@ if __name__ == '__main__':
 
 Lo ejecutamos y vemos si ganamos acceso:
 
-![Untitled](Buffer-Ove%20dc636/Untitled%2016.png)
+![Untitled](/assets/images/Buffer-Overflow-trun/Untitled%2016.png)
