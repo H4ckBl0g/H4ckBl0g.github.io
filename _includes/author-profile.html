@@ -62,6 +62,14 @@
         </li>      
       {% endif %}
       
+       {% if author.CSCE %}
+        <li>
+          <a href="{{ author.CSCE }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fas fa-certificate" aria-hidden="true"></i> CRTE
+          </a>
+        </li>
+      {% endif %}
+      
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
