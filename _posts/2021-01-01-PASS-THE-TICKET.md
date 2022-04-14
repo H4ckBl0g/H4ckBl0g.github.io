@@ -4,7 +4,7 @@ Antes que nada os recomiendo mucho leer este [post](https://www.tarlogic.com/blo
 
 El entorno donde se van a realizar las pruebas es el siguiente:
 
-![Untitled](/assets/images/PASS-THE-TICKET/Untitled.png)
+![Untitled Diagram.drawio (19).png](/assets/images/ASPROAST-ATTACK/Untitled_Diagram.drawio_(19).png)
 
 El primer ***ticket*** que trataremos es el ***TGT*** o ***Ticket Granting Ticket***. Lo presentaremos ante el ***KDC*** para obtener el ***TGS*** o ***Ticket Granting Service***. El ***TGT*** será cifrado con la clave del ***KDC***, es decir, la clave derivada de la cuenta del ***krbtgt.***
 
