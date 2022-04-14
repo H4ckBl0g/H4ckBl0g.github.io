@@ -12,24 +12,24 @@ Luego, pueden extraer el hash de la contraseña de la cuenta de servicio e inten
 
 Para la realización de este ataque vamos a utilizar este entorno ya configurado:
 
-![Untitled](kerberoast%2079107/Untitled.png)
+![Untitled](/assets/images/kerberoasting-attack/Untitled.png)
 
 Si ejecutamos la herramienta de impacket GetUserSPNs, podemos ver que nuestro dominio no cuenta con ninguna cuenta configurada para realizar este ataque.
 
-![Untitled](kerberoast%2079107/Untitled%201.png)
+![Untitled](/assets/images/kerberoasting-attack/Untitled%201.png)
 
 Configuramos para que el usuario hackblog tenga el atributo SPN.
 
-![Untitled](kerberoast%2079107/Untitled%202.png)
+![Untitled](/assets/images/kerberoasting-attack/Untitled%202.png)
 
 Con cualquier credencial que tengamos podemos realizar un kerberoasting-attack
 
-![Untitled](kerberoast%2079107/Untitled%203.png)
+![Untitled](/assets/images/kerberoasting-attack/Untitled%203.png)
 
 Podemos obtener el TGS de este usuario e intentar crackearlo por fuerza bruta
 
-![Untitled](kerberoast%2079107/Untitled%204.png)
+![Untitled](/assets/images/kerberoasting-attack/Untitled%204.png)
 
 Y mediante un ataque de diccionario offline podemos obtener la contraseña del usuario.
 
-![Untitled](kerberoast%2079107/Untitled%205.png)
+![Untitled](/assets/images/kerberoasting-attack/Untitled%205.png)
