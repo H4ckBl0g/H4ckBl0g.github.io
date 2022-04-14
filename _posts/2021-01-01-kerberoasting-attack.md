@@ -12,7 +12,7 @@ Luego, pueden extraer el hash de la contraseña de la cuenta de servicio e inten
 
 Para la realización de este ataque vamos a utilizar este entorno ya configurado:
 
-![Untitled](/assets/images/kerberoasting-attack/Untitled.png)
+![Untitled Diagram.drawio (19).png](/assets/images/ASPROAST-ATTACK/Untitled_Diagram.drawio_(19).png)
 
 Si ejecutamos la herramienta de impacket GetUserSPNs, podemos ver que nuestro dominio no cuenta con ninguna cuenta configurada para realizar este ataque.
 
