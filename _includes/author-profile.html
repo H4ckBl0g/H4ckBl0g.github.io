@@ -70,6 +70,14 @@
         </li>
       {% endif %}
       
+      {% if author.eWPTXv2 %}
+        <li>
+          <a href="{{ author.eWPTXv2 }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fas fa-certificate" aria-hidden="true"></i> eWPTXv2
+          </a>
+        </li>
+      {% endif %}
+      
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
